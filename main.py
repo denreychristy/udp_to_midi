@@ -3,12 +3,12 @@
 # ==================================================================== #
 
 import socket
-import mido
+from mido import open_output, get_output_names
 from datetime import datetime
 
 # ==================================================================== #
 
-MIDI_OUTPUT = mido.open_output(mido.get_output_names()[0])
+MIDI_OUTPUT = open_output(get_output_names()[0])
 
 UDP_IP = "0.0.0.0"
 UDP_PORT = 5005
